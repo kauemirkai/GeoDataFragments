@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class Pais implements Serializable, Comparable{
 
-    private String nome;
+    public String nome;
     private String codigo3;
     private String capital;
     private String regiao;

@@ -4,6 +4,11 @@ package br.usjt.ftce.deswebmob.GeoData.presenter;
 
 import br.usjt.ftce.deswebmob.GeoData.model.Pais;
 
+/**
+ * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
+ * Turma: CCP3AN-MCA
+ * Professor:Bonato
+ */
 
 
 import br.usjt.ftce.deswebmob.GeoData.view.MainView;
@@ -65,8 +70,10 @@ public class MainPresenter implements Presenter {
     }
 
 
-    public void configurarView(Pais pais){
+    public Pais configurarView(Pais pais){
         view.configurarView(pais);
+
+        return pais;
     }
 }
 

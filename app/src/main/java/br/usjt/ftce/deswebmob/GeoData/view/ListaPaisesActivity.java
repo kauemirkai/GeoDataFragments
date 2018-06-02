@@ -51,7 +51,7 @@ public class ListaPaisesActivity extends Activity  implements MainView{
 
 
     @Override
-    public void configurarView(Pais paises) {
-
+    public Pais configurarView(Pais paises) {
+    return paises;
     }
 }
