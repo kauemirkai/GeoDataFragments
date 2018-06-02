@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.view;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +8,16 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import br.usjt.ftce.deswebmob.GeoData.R;
+import br.usjt.ftce.deswebmob.GeoData.model.Pais;
+import br.usjt.ftce.deswebmob.GeoData.model.PaisAdapter;
+
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
  * Turma: CCP3AN-MCA
  * Professor:Bonato
  */
-public class ListaPaisesActivity extends Activity {
+public class ListaPaisesActivity extends Activity  implements MainView{
     public static final String PAIS_SELECIONADO = "br.usjt.ftce.deswebmob.Geodata.pais_selecionado";
     Activity activity;
     ArrayList<Pais> paises;
@@ -41,5 +45,13 @@ public class ListaPaisesActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        configurarView(paises.get(1));
+    }
+
+
+    @Override
+    public void configurarView(Pais paises) {
+
     }
 }

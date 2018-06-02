@@ -1,10 +1,10 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.model;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import static br.usjt.ftce.deswebmob.GeoData.PaisDbContract.PaisBanco;
+import static br.usjt.ftce.deswebmob.GeoData.model.PaisDbContract.PaisBanco;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004

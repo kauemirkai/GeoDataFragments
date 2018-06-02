@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.view;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import br.usjt.ftce.deswebmob.GeoData.R;
+import br.usjt.ftce.deswebmob.GeoData.model.Pais;
+import br.usjt.ftce.deswebmob.GeoData.model.Util;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004

@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.model;
 
 
 

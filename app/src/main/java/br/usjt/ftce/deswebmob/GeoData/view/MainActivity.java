@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,22 +8,39 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import br.usjt.ftce.deswebmob.GeoData.R;
+import br.usjt.ftce.deswebmob.GeoData.model.Pais;
+import br.usjt.ftce.deswebmob.GeoData.model.PaisDb;
+import br.usjt.ftce.deswebmob.GeoData.model.PaisesNetworking;
+import br.usjt.ftce.deswebmob.GeoData.presenter.MainPresenter;
+
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
  * Turma: CCP3AN-MCA
  * Professor:Bonato
  */
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements MainView {
     Spinner spinner;
     String continente = "";
     Context contexto;
+    MainPresenter presenter = new MainPresenter(this);
 
     public static final String CHAVE = "br.usjt.ftce.deswebmob.dadosmundi.paises";
+
+
+    @Override
+    public void configurarView(Pais paises) {
+        presenter.configurarView(paises);
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +89,7 @@ public class MainActivity extends Activity {
         }
 
     }
+
 
     // Classe para a thread que busca o JSON que vai vir pelo serviço
     private class DownloadJsonPaises extends AsyncTask<String, Void, ArrayList<Pais>> {

@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.view;
 
 import android.widget.ImageView;
 import android.widget.TextView;

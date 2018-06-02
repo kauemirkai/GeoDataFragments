@@ -1,8 +1,10 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.model;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
 import java.lang.reflect.Field;
+
+import br.usjt.ftce.deswebmob.GeoData.R;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004

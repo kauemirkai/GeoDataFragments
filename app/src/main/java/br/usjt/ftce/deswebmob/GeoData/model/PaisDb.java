@@ -1,10 +1,10 @@
-package br.usjt.ftce.deswebmob.GeoData;
+package br.usjt.ftce.deswebmob.GeoData.model;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import static br.usjt.ftce.deswebmob.GeoData.PaisDbContract.PaisBanco;
+import static br.usjt.ftce.deswebmob.GeoData.model.PaisDbContract.PaisBanco;
 
 import java.util.ArrayList;
 

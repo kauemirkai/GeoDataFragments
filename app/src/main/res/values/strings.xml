@@ -10,6 +10,7 @@
     <string name="lblGini">Gini:</string>
     <string name="lblLatitude">Latitude:</string>
     <string name="lblLongitude">Longitude:</string>
+    <string name="teste">teste 1</string>
     <string name="lblTodasInformacoes">Todas informações:</string>
     <string name="lblArea">Área:</string>
     <string-array name="continentes">
