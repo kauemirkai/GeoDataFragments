@@ -222,41 +222,17 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textStyle="bold"
-            android:text="@string/lblLongitude"
-            android:padding="4dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:id="@+id/txtLongitude"
-            android:padding="4dp"/>
 
-    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textStyle="bold"
-        android:text="@string/lblTodasInformacoes"
-        android:padding="4dp"/>
-
-    <TextView
+    <fragment
+        android:id="@+id/detalhe_pais_fragment"
+        class="br.usjt.ftce.deswebmob.GeoData.DetalhePaisFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:id="@+id/txtTodasInformacoes"
-        android:padding="4dp"/>
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_detalhe_pais" />
+
+
 
 </LinearLayout>

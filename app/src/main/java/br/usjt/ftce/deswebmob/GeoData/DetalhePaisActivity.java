@@ -1,6 +1,7 @@
 package br.usjt.ftce.deswebmob.GeoData;
 
 import android.app.Activity;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -18,6 +19,24 @@ public class DetalhePaisActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhe_pais);
+
+        android.app.FragmentManager fm = getFragmentManager();
+
+     /*   super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        FragmentManager fm = getSupportFragmentManager();
+        //primeira chamada ao método onCreate
+        */
+        if (savedInstanceState == null) {
+            //começa a transação
+            FragmentTransaction ft = fm.beginTransaction();
+            DetalhePaisFragment hwf = new DetalhePaisFragment();
+            //adiciona
+            ft.add(R.id.detalhe_pais_fragment, hwf, "DetalhePaisFragmentTag");
+            //confirma e fecha a transação
+            ft.commit();
+        }
+
         Intent intent = getIntent();
         Pais pais = (Pais) intent.getSerializableExtra(ListaPaisesActivity.PAIS_SELECIONADO);
 
