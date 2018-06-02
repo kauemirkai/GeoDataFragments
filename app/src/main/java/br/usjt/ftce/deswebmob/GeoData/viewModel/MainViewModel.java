@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.GeoData.presenter;
+package br.usjt.ftce.deswebmob.GeoData.viewModel;
 
 
 
@@ -9,18 +9,29 @@ import br.usjt.ftce.deswebmob.GeoData.model.Pais;
  * Turma: CCP3AN-MCA
  * Professor:Bonato
  */
+import br.usjt.ftce.deswebmob.GeoData.R;
 
+import br.usjt.ftce.deswebmob.GeoData.viewModel.MainViewModel;
+
+import android.databinding.*;
+
+import java.util.Observable;
 
 import br.usjt.ftce.deswebmob.GeoData.view.MainView;
 
-public class MainPresenter implements Presenter {
+public class MainViewModel implements ViewModel {
     private Pais model;
     MainView view;
 
-    public MainPresenter(MainView view){
-        this.view = view;
-        model = new Pais();//para funcionar nos testes;
-    }
+    public final ObservableField<String> nome = new ObservableField<>();
+    public final ObservableField<String> capital = new ObservableField<>();
+    public final ObservableField<String> regiao = new ObservableField<>();
+    public final ObservableField<String> subRegiao = new ObservableField<>();
+
+
+
+
+    public MainViewModel(){model = new Pais();}
 
     @Override
     public void onCreate() {

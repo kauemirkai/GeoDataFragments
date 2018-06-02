@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import br.usjt.ftce.deswebmob.GeoData.R;
 import br.usjt.ftce.deswebmob.GeoData.model.Pais;
 import br.usjt.ftce.deswebmob.GeoData.model.PaisAdapter;
+import br.usjt.ftce.deswebmob.GeoData.viewModel.MainViewModel;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
@@ -21,10 +22,15 @@ public class ListaPaisesActivity extends Activity  implements MainView{
     public static final String PAIS_SELECIONADO = "br.usjt.ftce.deswebmob.Geodata.pais_selecionado";
     Activity activity;
     ArrayList<Pais> paises;
+    MainViewModel viewModel = new MainViewModel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setViewModel(viewModel);
+        viewModel.onCreate();
+
         setContentView(R.layout.activity_lista_paises);
 
         activity = this;
@@ -46,7 +52,7 @@ public class ListaPaisesActivity extends Activity  implements MainView{
             }
         });
 
-        configurarView(paises.get(1));
+
     }
 
 

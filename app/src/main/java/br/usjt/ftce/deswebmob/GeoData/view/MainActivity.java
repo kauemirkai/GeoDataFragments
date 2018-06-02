@@ -17,7 +17,7 @@ import br.usjt.ftce.deswebmob.GeoData.R;
 import br.usjt.ftce.deswebmob.GeoData.model.Pais;
 import br.usjt.ftce.deswebmob.GeoData.model.PaisDb;
 import br.usjt.ftce.deswebmob.GeoData.model.PaisesNetworking;
-import br.usjt.ftce.deswebmob.GeoData.presenter.MainPresenter;
+import br.usjt.ftce.deswebmob.GeoData.viewModel.MainViewModel;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
@@ -25,18 +25,21 @@ import br.usjt.ftce.deswebmob.GeoData.presenter.MainPresenter;
  * Professor:Bonato
  */
 
+
 public class MainActivity extends Activity implements MainView {
     Spinner spinner;
     String continente = "";
     Context contexto;
-    MainPresenter presenter = new MainPresenter(this);
+    MainViewModel viewModel = new MainViewModel();
+
+
 
     public static final String CHAVE = "br.usjt.ftce.deswebmob.dadosmundi.paises";
 
 
     @Override
     public Pais configurarView(Pais paises) {
-        presenter.configurarView(paises);
+        viewModel.configurarView(paises);
         return paises;
 
     }
@@ -62,6 +65,8 @@ public class MainActivity extends Activity implements MainView {
 
             }
         });
+        viewModel.onCreate();
+
     }
 
     public void listarPaises(View view) {

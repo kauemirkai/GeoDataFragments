@@ -1,4 +1,4 @@
-package br.usjt.ftce.deswebmob.GeoData.presenter;
+package br.usjt.ftce.deswebmob.GeoData.viewModel;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
@@ -6,7 +6,7 @@ package br.usjt.ftce.deswebmob.GeoData.presenter;
  * Professor:Bonato
  */
 
-public interface Presenter {
+public interface ViewModel {
     void onCreate();
     void onStart();
     void onRestart();

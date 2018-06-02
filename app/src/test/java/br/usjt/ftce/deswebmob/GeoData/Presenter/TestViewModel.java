@@ -7,11 +7,10 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 import br.usjt.ftce.deswebmob.GeoData.model.Pais;
-import br.usjt.ftce.deswebmob.GeoData.presenter.MainPresenter;
+import br.usjt.ftce.deswebmob.GeoData.viewModel.MainViewModel;
 import br.usjt.ftce.deswebmob.GeoData.view.MainView;
 
 import static junit.framework.Assert.assertEquals;
-import static org.mockito.Mockito.when;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
@@ -20,15 +19,13 @@ import static org.mockito.Mockito.when;
  */
 
 @RunWith(MockitoJUnitRunner.class)
-public class TestPresenter {
-    private MainPresenter presenter;
+public class TestViewModel {
+    private MainViewModel viewModel;
 
-    @Mock
-    private MainView view;
 
     @Before
     public void setup() {
-        presenter = new MainPresenter(view);
+        viewModel = new MainViewModel();
     }
 
     @Test
@@ -36,8 +33,8 @@ public class TestPresenter {
         Pais pais = new Pais();
         pais.setNome("test");
         pais.setCapital("test");
-        presenter.construir(pais);
-        Pais paistest = presenter.configurarView(pais);
+        viewModel.construir(pais);
+        Pais paistest = viewModel.configurarView(pais);
 
         assertEquals("test",pais.getNome());
         assertEquals("test", paistest.getNome());

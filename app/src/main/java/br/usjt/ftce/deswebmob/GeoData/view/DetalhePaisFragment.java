@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import br.usjt.ftce.deswebmob.GeoData.R;
+import br.usjt.ftce.deswebmob.GeoData.viewModel.MainViewModel;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,7 +22,7 @@ import br.usjt.ftce.deswebmob.GeoData.R;
 
 public class DetalhePaisFragment extends Fragment {
 
-
+    MainViewModel viewModel = new MainViewModel();
     public DetalhePaisFragment() {
         // Required empty public constructor
     }

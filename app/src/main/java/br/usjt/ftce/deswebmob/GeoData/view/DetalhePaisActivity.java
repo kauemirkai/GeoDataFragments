@@ -10,6 +10,7 @@ import android.widget.TextView;
 import br.usjt.ftce.deswebmob.GeoData.R;
 import br.usjt.ftce.deswebmob.GeoData.model.Pais;
 import br.usjt.ftce.deswebmob.GeoData.model.Util;
+import br.usjt.ftce.deswebmob.GeoData.viewModel.MainViewModel;
 
 /**
  * @author Kaue Victor Paz Garcia Mirkai  - RA: 81613004
@@ -18,6 +19,8 @@ import br.usjt.ftce.deswebmob.GeoData.model.Util;
  */
 
 public class DetalhePaisActivity extends Activity {
+
+    MainViewModel viewModel = new MainViewModel();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +85,6 @@ public class DetalhePaisActivity extends Activity {
 
         ImageView bandeira = (ImageView) findViewById(R.id.imagemBandeira);
         bandeira.setImageDrawable(Util.getDrawable(this, pais.getCodigo3().toLowerCase()));
-
+        viewModel.onCreate();
     }
 }
